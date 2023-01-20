@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -85,6 +85,38 @@ WSGI_APPLICATION = 'tips.wsgi.application'
 #     }
 # }
 
+# import environ
+#
+# AWS_SERVER = True
+#
+#
+# if AWS_SERVER:
+#     env = environ.Env()
+#     environ.Env.read_env(os.path.join(BASE_DIR, '.env_dev'))
+#     SECRET_KEY = env('SECRET_KEY')
+#     DEBUG = env.bool('DEBUG', default=False)
+#     ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': env("Tips"),
+#             'USER': env("postgres"),
+#             'PASSWORD': env("atai2010"),
+#             'HOST': 'localhost',
+#         }
+#     }
+# else:
+#     SECRET_KEY = 'SECRET_KEY'
+#     DEBUG = True
+#     ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+
+#
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',

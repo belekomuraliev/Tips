@@ -78,55 +78,30 @@ WSGI_APPLICATION = 'tips.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# import environ
-#
-# AWS_SERVER = True
-#
-#
-# if AWS_SERVER:
-#     env = environ.Env()
-#     environ.Env.read_env(os.path.join(BASE_DIR, '.env_dev'))
-#     SECRET_KEY = env('SECRET_KEY')
-#     DEBUG = env.bool('DEBUG', default=False)
-#     ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'NAME': env("Tips"),
-#             'USER': env("postgres"),
-#             'PASSWORD': env("atai2010"),
-#             'HOST': 'localhost',
-#         }
-#     }
-# else:
-#     SECRET_KEY = 'SECRET_KEY'
-#     DEBUG = True
-#     ALLOWED_HOSTS = ['127.0.0.1', 'localhost', ]
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'NAME': BASE_DIR / 'db.sqlite3',
-#         }
-#     }
-
-#
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'Tips',
-        'USER': 'postgres',
-        'PASSWORD': 'atai2010',
-        'HOST': '127.0.0.1',
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+# STATIC_URL = '/static/'
+# MEDIA_URL = ' /media/'
+#
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'Tips',
+#         'USER': 'postgres',
+#         'PASSWORD': 'atai2010',
+#         'HOST': '127.0.0.1',
+#         'PORT': '5432',
+#     }
+# }
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
